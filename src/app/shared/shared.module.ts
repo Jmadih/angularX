@@ -7,7 +7,7 @@ import {MatModule} from './mat.module';
     CommonModule,
     MatModule
   ],
-  exports: [MatModule],
+  exports: [MatModule, CommonModule],
   declarations: []
 })
 export class SharedModule { }
