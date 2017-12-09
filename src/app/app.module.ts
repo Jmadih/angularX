@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import {HomeModule} from './home/home.module';
+import {LayoutModule} from './layout/layout.module';
 
 
 
@@ -13,7 +14,8 @@ import {HomeModule} from './home/home.module';
   ],
   imports: [
     BrowserModule,
-    HomeModule
+    HomeModule,
+    LayoutModule
   ],
   providers: [],
   bootstrap: [AppComponent]
