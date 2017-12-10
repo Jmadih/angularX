@@ -7,10 +7,10 @@
         <p>{{introduction?.email}}</p>
         <p>{{introduction?.birthDate}}</p>
         <div *ngIf="isAvailable(introduction?.status); else unvailable">
-          <p><mat-icon class="available">check_circle</mat-icon>Available</p>
+          <p><mat-icon [style.color]="'#01DF74'">check_circle</mat-icon>Available</p>
         </div>
         <ng-template #unvailable>
-          <p><mat-icon class="unvailable">highlight_off</mat-icon>Unvailable</p>
+          <p><mat-icon [style.color]="'orangered'">highlight_off</mat-icon>Unvailable</p>
         </ng-template>
       </mat-card-content>
       <mat-card-actions>
