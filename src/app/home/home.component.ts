@@ -23,6 +23,7 @@ export class HomeComponent implements OnInit {
     this.introduction.description = "I am a professional tiger wrestler. I wrestled the biggest Siberian Tigers for the opening act at the Awesome and Dangerous Circus.";
     this.introduction.imageUrl = "assets/images/me.jpg";
     this.introduction.status = Status.AVAILABLE;
+    this.introduction.experience = 11;
     this.introduction.links = [
       new Link("", "./assets/images/linkedin.png"),
       new Link("", "./assets/images/github.png"),

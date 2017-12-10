@@ -15,6 +15,7 @@ export class Introduction{
     private _status: Status;
     private _description: string;
     private _links : Link[];
+    private _experience: number;
 
     constructor(){
         this._links = new Array<Link>();
@@ -99,4 +100,13 @@ export class Introduction{
     set links(value: Link[]) {
         this._links = value;
     }
+
+
+  get experience(): number {
+    return this._experience;
+  }
+
+  set experience(value: number) {
+    this._experience = value;
+  }
 }
