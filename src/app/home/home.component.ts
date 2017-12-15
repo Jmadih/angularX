@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {Introduction, Status} from './introduction';
-import {Link} from './link';
+import {Introduction, Status} from '../shared/models/introduction';
+import {Link} from '../shared/models/link';
 
 @Component({
   selector: 'app-home',
