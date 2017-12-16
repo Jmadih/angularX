@@ -1,15 +1,13 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {MatModule} from './mat.module';
-import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   imports: [
     CommonModule,
-    MatModule,
-    HttpClientModule
+    MatModule
   ],
-  exports: [MatModule, CommonModule, HttpClientModule],
+  exports: [MatModule, CommonModule],
   declarations: []
 })
 export class SharedModule { }
