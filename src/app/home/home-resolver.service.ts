@@ -43,7 +43,6 @@ export class HomeResolverService implements Resolve<any> {
       experience: 5
     }];
 
-  // Injecter le service HomeService
   constructor(private router: Router) { }
 
   resolve(activatedRoute: ActivatedRouteSnapshot): Observable<Introduction> {
