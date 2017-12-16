@@ -3,7 +3,6 @@ import {HomeComponent} from './home.component';
 import {SharedModule} from '../shared/shared.module';
 import { YearsOfExperienceDirective } from './years-of-experience.directive';
 import {HomeResolverService} from './home-resolver.service';
-import {HomeService} from './home.service';
 
 @NgModule({
   imports: [
@@ -11,6 +10,6 @@ import {HomeService} from './home.service';
   ],
   declarations: [HomeComponent, YearsOfExperienceDirective],
   exports: [HomeComponent],
-  providers: [HomeResolverService, HomeService]
+  providers: [HomeResolverService]
 })
 export class HomeModule { }
