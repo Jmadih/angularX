@@ -9,7 +9,7 @@ import {ActivatedRoute} from '@angular/router';
 })
 export class HomeComponent implements OnInit {
 
-  private introduction : Introduction;
+  introduction : Introduction;
 
   constructor(private route: ActivatedRoute) {
   }
@@ -26,5 +26,13 @@ export class HomeComponent implements OnInit {
 
   edit(){
     alert('edit');
+  }
+
+  save(model){
+    console.log(model);
+  }
+
+  cancel(){
+    console.log("cancel");
   }
 }
