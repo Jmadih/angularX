@@ -27,7 +27,7 @@ exports.updateIntro = function (req, res) {
   console.log("Update introduction: id = "+ id);
   var introduction = req.body;
   var index = _.findIndex(INTRODUCTIONS, function (p) {
-    return p._id === id;
+    return p.id === +id;
   });
   if (index === -1) {
     return res.status(404).json({error: 'The introduction with id "' + id + '" doesn\'t exist.'});
@@ -37,7 +37,7 @@ exports.updateIntro = function (req, res) {
     oldIntroduction[prop] = introduction[prop]
   }
   INTRODUCTIONS[index] = oldIntroduction;
-  return res.status(200).json(INTRODUCTIONS);
+  return res.status(200).json(INTRODUCTIONS[index]);
 }
 
 exports.getSkills = function (req, res) {
