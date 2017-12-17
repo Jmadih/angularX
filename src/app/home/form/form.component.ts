@@ -13,16 +13,10 @@ export class IntroFormComponent implements OnInit {
 
   model: Introduction;
 
-  cancel$;
-
-  submit$;
-
   form: FormGroup;
 
   constructor(private dialogRef: MatDialogRef<IntroFormComponent>,
               private souscriptionInitFormService: SouscriptionInitFormService) {
-    this.submit$ = new EventEmitter();
-    this.cancel$ = new EventEmitter();
   }
 
   ngOnInit() {

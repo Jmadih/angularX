@@ -24,13 +24,12 @@ export class HomeService {
     this.introFormDialogRef = this.dialog.open(IntroFormComponent);
     this.introFormDialogRef.componentInstance.model = model;
     return this.introFormDialogRef
-      .afterClosed()
-      .pipe(
-        filter(introduction => introduction),
-        mergeMap(introduction => this.editIntroduction(introduction)));
+      .afterClosed();
+    // edit the introduction with the endpoint
   }
 
   private editIntroduction(introduction: Introduction): Observable<Introduction> {
-    return this.http.put<Introduction>(`${BASE_URL + "/" + appConst.urls.intros}/${introduction.id}`, introduction);
+    // call the put endpoint
+    return Observable.of(null);
   }
 }
