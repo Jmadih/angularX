@@ -15,8 +15,6 @@ export class HomeComponent implements OnInit {
 
   introduction : Introduction;
 
-  introFormDialogRef: MatDialogRef<IntroFormComponent>;
-
   constructor(private route: ActivatedRoute,
               private dialog: MatDialog,
               private homeService: HomeService) {
