@@ -4,7 +4,7 @@
     <div class="divIntro">
       <mat-card-content>
         <p>{{introduction?.firstname}} {{introduction?.lastname}}</p>
-        <p>{{introduction?.email}}</p>
+        <p>{{introduction?.email | undefined}}</p>
         <p>{{introduction?.birthDate}}</p>
         <span yearsOfExperience [nbrOfYears]="introduction?.experience"></span>
         <div *ngIf="isAvailable(introduction?.status); else unvailable">

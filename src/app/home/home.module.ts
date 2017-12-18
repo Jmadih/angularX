@@ -6,12 +6,13 @@ import {HomeResolverService} from './home-resolver.service';
 import {HomeService} from './home.service';
 import {IntroFormComponent} from './form/form.component';
 import {SouscriptionInitFormService} from './form/introduction.init-form.service';
+import {UndefinedPipe} from './undefined.pipe';
 
 @NgModule({
   imports: [
     SharedModule
   ],
-  declarations: [HomeComponent, IntroFormComponent, YearsOfExperienceDirective],
+  declarations: [HomeComponent, IntroFormComponent, YearsOfExperienceDirective, UndefinedPipe],
   exports: [HomeComponent],
   providers: [HomeResolverService, HomeService, SouscriptionInitFormService, SouscriptionInitFormService],
   entryComponents: [IntroFormComponent]
