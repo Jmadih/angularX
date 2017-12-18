@@ -6,16 +6,13 @@
         <p>{{introduction?.firstname}} {{introduction?.lastname}}</p>
         <p>{{introduction?.email}}</p>
         <p>{{introduction?.birthDate}}</p>
-        <span yearsOfExperience [nbrOfYears]="introduction.experience"></span>
-        <div *ngIf="isAvailable(introduction?.status); else unvailable">
-          <p><mat-icon [style.color]="'#01DF74'">check_circle</mat-icon>Available</p>
-        </div>
-        <ng-template #unvailable>
-          <p><mat-icon [style.color]="'orangered'">highlight_off</mat-icon>Unvailable</p>
-        </ng-template>
+
+        <mat-icon >check_circle</mat-icon>
+        <mat-icon >highlight_off</mat-icon>
+
       </mat-card-content>
       <mat-card-actions>
-        <img *ngFor="let link of introduction?.links" mat-card-avatar [src]="link.picture" />
+
       </mat-card-actions>
     </div>
     <p class="description">
