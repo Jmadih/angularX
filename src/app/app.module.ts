@@ -10,7 +10,6 @@ import {RouterModule} from '@angular/router';
 import {appRoutes} from './app.routes';
 import {SharedModule} from './shared/shared.module';
 import { SkillsComponent } from './skills/skills.component';
-import {ConnectedGuard} from './security/connected.guard';
 import {SecurityModule} from './security/security.module';
 
 
@@ -29,7 +28,7 @@ import {SecurityModule} from './security/security.module';
     SharedModule,
     SecurityModule
   ],
-  providers: [ConnectedGuard],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

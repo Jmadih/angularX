@@ -3,15 +3,16 @@ import { CommonModule } from '@angular/common';
 import {MatModule} from './mat.module';
 import {HttpClientModule} from '@angular/common/http';
 import {ReactiveFormsModule} from '@angular/forms';
+import {UndefinedPipe} from './undefined.pipe';
 
 @NgModule({
   imports: [
     CommonModule,
     MatModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
   ],
-  exports: [MatModule, CommonModule, HttpClientModule, ReactiveFormsModule],
-  declarations: []
+  exports: [MatModule, CommonModule, HttpClientModule, ReactiveFormsModule, UndefinedPipe],
+  declarations: [UndefinedPipe]
 })
 export class SharedModule { }
