@@ -10,6 +10,7 @@ import {HomeService} from './home.service';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
+  private disable = false;
 
   introduction : Introduction;
 
@@ -29,8 +30,10 @@ export class HomeComponent implements OnInit {
   }
 
   edit(){
+    this.disable = true;
    this.homeService.openEditPopUp(this.introduction)
       .subscribe(() => {
+  }
 
       });
   }
