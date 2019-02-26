@@ -9,31 +9,33 @@ import {Link} from './link';
 })
 export class HomeComponent implements OnInit {
 
-  private introduction : Introduction;
+  private introduction: Introduction;
+  private disable = false;
 
   constructor() {
     this.introduction = new Introduction();
   }
 
   ngOnInit() {
-    this.introduction.firstname = "Lucie";
-    this.introduction.lastname = "Macdonie"
-    this.introduction.birthDate = "10/09/1985";
-    this.introduction.email = "lucie.macdonie@gmail.com";
-    this.introduction.description = "I am a professional tiger wrestler. I wrestled the biggest Siberian Tigers for the opening act at the Awesome and Dangerous Circus.";
-    this.introduction.imageUrl = "assets/images/me.jpg";
+    this.introduction.firstname = 'Lucie';
+    this.introduction.lastname = 'Macdonie';
+    this.introduction.birthDate = '10/09/1985';
+    this.introduction.email = 'lucie.macdonie@gmail.com';
+    this.introduction.description = 'I am a professional tiger wrestler. I wrestled the biggest Siberian Tigers for the opening act at the Awesome and Dangerous Circus.';
+    this.introduction.imageUrl = 'assets/images/me.jpg';
     this.introduction.status = Status.AVAILABLE;
     this.introduction.links = [
-      new Link("", "./assets/images/linkedin.png"),
-      new Link("", "./assets/images/github.png"),
-      new Link("", "./assets/images/codepen.png")];
+      new Link('', './assets/images/linkedin.png'),
+      new Link('', './assets/images/github.png'),
+      new Link('', './assets/images/codepen.png')];
   }
 
-  isAvailable(status: Status): boolean{
+  isAvailable(status: Status): boolean {
     return status === Status.AVAILABLE;
   }
 
   edit(){
+    this.disable = true;
     alert('edit');
   }
 }
