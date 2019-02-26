@@ -8,6 +8,7 @@ import {ActivatedRoute} from '@angular/router';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
+  private disable = false;
 
   introduction : Introduction;
 
@@ -25,6 +26,7 @@ export class HomeComponent implements OnInit {
   }
 
   edit(){
+    this.disable = true;
     alert('edit');
   }
 
