@@ -6,7 +6,7 @@
         <p>{{introduction?.firstname}} {{introduction?.lastname}}</p>
         <p>{{introduction?.email}}</p>
         <p>{{introduction?.birthDate}}</p>
-        <span yearsOfExperience [nbrOfYears]="introduction?.experience"></span>
+        <span appYearsOfExperience [nbrOfYears]="introduction.experience"></span>
         <div *ngIf="isAvailable(introduction?.status); else unvailable">
           <p><mat-icon [style.color]="'#01DF74'">check_circle</mat-icon>Available</p>
         </div>
