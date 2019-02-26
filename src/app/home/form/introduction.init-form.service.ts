@@ -15,7 +15,7 @@ export class SouscriptionInitFormService {
     const firstname = this.formBuilder.control(introduction ? introduction.firstname : '', [Validators.required]);
     const lastname = this.formBuilder.control(introduction ? introduction.lastname : '', [Validators.required]);
     const birthDate = this.formBuilder.control(introduction ? introduction.birthDate : '', [Validators.required]);
-    const email = this.formBuilder.control(introduction ? introduction.email : '', [Validators.required]);
+    const email = this.formBuilder.control(introduction ? introduction.email : '', []);
     const status = this.formBuilder.control(introduction ? introduction.status : '', [Validators.required]);
     const links =  this.formBuilder.control(introduction ? introduction.links : '', [Validators.required]);
     const description = this.formBuilder.control(introduction ? introduction.description : '', [Validators.required, Validators.minLength(20)]);
