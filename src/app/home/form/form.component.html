@@ -6,17 +6,17 @@
     <!-- <form novalidate> -->
       <table style="width: 100%" cellspacing="0">
         <tr>
-          <mat-input-container >
+          <mat-form-field>
             <input matInput placeholder="First name"  name="firstname" />
-          </mat-input-container>
+          </mat-form-field>
         </tr>
         <tr>
-          <mat-input-container  >
+          <mat-form-field>
             <input matInput placeholder="Last Name"  name="lastname" />
-          </mat-input-container>
+          </mat-form-field>
         </tr>
         <tr>
-          <mat-form-field >
+          <mat-form-field>
             <textarea matInput  placeholder="Description" rows="10" cols="50"  name="description"></textarea>
             <mat-hint align="start" >
               The description is required
@@ -25,7 +25,7 @@
         </tr>
         <tr>
           <br>
-          <mat-radio-group >
+          <mat-radio-group>
             <mat-radio-button value="AVAILABLE">Available</mat-radio-button>
             <mat-radio-button value="UNAVAILABLE">Unvailable</mat-radio-button>
           </mat-radio-group>

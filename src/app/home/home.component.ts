@@ -10,9 +10,8 @@ import {HomeService} from './home.service';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-  private disable = false;
 
-  introduction : Introduction;
+  introduction: Introduction;
 
   constructor(private route: ActivatedRoute,
               private dialog: MatDialog,
@@ -25,16 +24,13 @@ export class HomeComponent implements OnInit {
     });
   }
 
-  isAvailable(status: string): boolean{
+  isAvailable(status: string): boolean {
     return Status[status] === Status.AVAILABLE;
   }
 
-  edit(){
-    this.disable = true;
-   this.homeService.openEditPopUp(this.introduction)
+  edit() {
+    this.homeService.openEditPopUp(this.introduction)
       .subscribe(() => {
-  }
-
       });
   }
 }
