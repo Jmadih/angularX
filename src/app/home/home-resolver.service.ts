@@ -9,7 +9,6 @@ import {Observable} from 'rxjs/Observable';
 @Injectable()
 export class HomeResolverService implements Resolve<any> {
 
-  // Déplacer ce tableau dans le service
   introductions : Introduction[] = [{
     id : 1,
     firstname :  'Lucie',
@@ -21,9 +20,9 @@ export class HomeResolverService implements Resolve<any> {
     status: Status.AVAILABLE,
     description:  'I am a professional tiger wrestler. I wrestled the biggest Siberian Tigers for the opening act at the Awesome and Dangerous Circus.',
     links : [
-      new Link("", "./assets/images/linkedin.png"),
-      new Link("", "./assets/images/github.png"),
-      new Link("", "./assets/images/codepen.png")],
+      new Link('', './assets/images/linkedin.png'),
+      new Link('', './assets/images/github.png'),
+      new Link('', './assets/images/codepen.png')],
     experience: 11
   },
     {
@@ -37,9 +36,9 @@ export class HomeResolverService implements Resolve<any> {
       status: Status.UNAVAILABLE,
       description:  'I am a mechanical engineer. I\'ve worked at the biggest aerospace company',
       links : [
-        new Link("", "./assets/images/linkedin.png"),
-        new Link("", "./assets/images/github.png"),
-        new Link("", "./assets/images/codepen.png")],
+        new Link('', './assets/images/linkedin.png'),
+        new Link('', './assets/images/github.png'),
+        new Link('', './assets/images/codepen.png')],
       experience: 5
     }];
 
@@ -48,7 +47,7 @@ export class HomeResolverService implements Resolve<any> {
   resolve(activatedRoute: ActivatedRouteSnapshot): Observable<Introduction> {
     const id: number = activatedRoute.params['id'];
     const result = _.find(this.introductions, { 'id': +id});
-    if(!result) this.router.navigate(["/404"]);
+    if(!result) this.router.navigate(['/404']);
     return result;
   }
 
