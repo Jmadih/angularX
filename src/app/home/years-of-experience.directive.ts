@@ -1,7 +1,7 @@
 import {Directive, ElementRef, Input, OnInit, Renderer2} from '@angular/core';
 
 @Directive({
-  selector: '[yearsOfExperience]'
+  selector: '[appYearsOfExperience]'
 })
 export class YearsOfExperienceDirective implements OnInit {
 
@@ -12,7 +12,7 @@ export class YearsOfExperienceDirective implements OnInit {
 
   ngOnInit() {
     if (this.nbrOfYears && this.nbrOfYears > 10) {
-      let star = '<img mat-card-avatar width="20px" src="./assets/images/star.png">';
+      const star = '<img mat-card-avatar width="20px" src="./assets/images/star.png">';
       this.renderer.setProperty(this.el.nativeElement, 'innerHTML', star);
     }
   }
