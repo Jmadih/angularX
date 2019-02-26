@@ -1,1 +1,12 @@
-/* You can add global styles to this file, and also import other style files */
+@import url(https://fonts.googleapis.com/icon?family=Material+Icons);
+@import '~@angular/material/theming';
+@import 'app/shared/styles/variables';
+@import url(https://unpkg.com/basscss@8.0.2/css/basscss.min.css);
+
+@include mat-core();
+$cvrocks-orange-palette: map_merge($mat-deep-orange, (500: $cvrocks-primary));
+$primary: mat-palette($cvrocks-orange-palette);
+$cvrocks-deep-orange-palette: map_merge($mat-deep-orange, (500: $cvrocks-accent));
+$accent: mat-palette($cvrocks-deep-orange-palette);
+$theme: mat-light-theme($primary, $accent);
+@include angular-material-theme($theme);

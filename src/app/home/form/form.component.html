@@ -1,0 +1,52 @@
+<mat-card class="mat-whiteframe-2dp">
+  <mat-card-title>
+    <span>Update</span>
+  </mat-card-title>
+  <mat-card-content>
+    <form novalidate [formGroup]="form">
+      <table style="width: 100%" cellspacing="0">
+        <tr>
+          <mat-form-field [ngClass]="{required: form.get('firstname').hasError('required')}">
+            <input matInput placeholder="First name" formControlName="firstname" name="firstname" />
+            <mat-hint align="start" *ngIf="form.get('firstname').touched && form.get('firstname').hasError('required')">
+              The firstname is required
+            </mat-hint>
+          </mat-form-field>
+        </tr>
+        <tr>
+          <mat-form-field [ngClass]="{required: form.get('lastname').hasError('required')}" >
+            <input matInput placeholder="Last Name" formControlName="lastname" name="lastname" />
+            <mat-hint align="start" *ngIf="form.get('lastname').touched && form.get('lastname').hasError('required')">
+              The lastname is required
+            </mat-hint>
+          </mat-form-field>
+        </tr>
+        <tr>
+          <mat-form-field [ngClass]="{required: form.get('description').hasError('required')}">
+            <textarea matInput  placeholder="Description" formControlName="description" rows="10" cols="50"  name="description"></textarea>
+            <mat-hint align="start" *ngIf="form.get('description').touched && form.get('description').hasError('required')">
+              The description is required
+            </mat-hint>
+            <mat-hint align="start" *ngIf="form.get('description').touched && form.get('description').hasError('minlength')">
+              The description must be at least 20 characters
+            </mat-hint>
+          </mat-form-field>
+        </tr>
+        <tr>
+          <br>
+          <mat-radio-group formControlName="status" [ngClass]="{required: form.get('status').hasError('required')}">
+            <mat-radio-button value="AVAILABLE">Available</mat-radio-button>
+            <mat-radio-button value="UNAVAILABLE">Unvailable</mat-radio-button>
+            <mat-hint align="start" *ngIf="form.get('status').touched && form.get('status').hasError('required')">
+              The status is required
+            </mat-hint>
+          </mat-radio-group>
+        </tr>
+      </table>
+    </form>
+  </mat-card-content>
+  <mat-card-actions align="end">
+    <button mat-button type="button" (click)="cancel()">Cancel</button>
+    <button mat-button color="primary" type="submit" (click)="submit(form.value)" [disabled]="form.invalid">Save</button>
+  </mat-card-actions>
+</mat-card>

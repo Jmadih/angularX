@@ -1,0 +1,8 @@
+@import './shared/styles/variables';
+
+body{
+  background-image: url("../assets/images/bckg.jpg");
+  @media screen and (max-width: $break-small) {
+    background-image: url("../assets/images/bckg.jpg");
+  }
+}

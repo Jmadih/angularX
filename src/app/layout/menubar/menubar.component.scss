@@ -1,0 +1,15 @@
+@import '../../shared/styles/variables';
+
+.btn{
+  width: 150px;
+  @media screen and (max-width: $break-small) {
+    width: 100%;
+    font-size: 10px;
+  }
+}
+
+.banner{
+  @media screen and (max-width: $break-small) {
+    width: 90%;
+  }
+}
