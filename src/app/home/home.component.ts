@@ -8,7 +8,7 @@ import {Link} from '../shared/models/link';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-
+  private disable = false;
   introduction: Introduction;
   introductions : Introduction[] = [{
     id : 1,
@@ -43,6 +43,8 @@ export class HomeComponent implements OnInit {
       experience: 5
     }];
 
+
+
   constructor() {
   }
 
@@ -55,6 +57,7 @@ export class HomeComponent implements OnInit {
   }
 
   edit(){
+    this.disable = true;
     alert('edit');
   }
 }
