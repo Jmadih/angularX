@@ -7,7 +7,7 @@
       imageUrl :  'assets/images/lucie.jpg',
       birthDate :  '10/09/1985',
       gender:  'W',
-      email:  'lucie.macdonie@gmail.com',
+      email:  '',
       status: 'AVAILABLE',
       description:  'I am a professional tiger wrestler. I wrestled the biggest Siberian Tigers for the opening act at the Awesome and Dangerous Circus.',
       links : [
