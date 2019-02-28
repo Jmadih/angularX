@@ -1,8 +1,8 @@
-import {Component, OnInit, Output, Input, EventEmitter} from '@angular/core';
-import {FormGroup, FormControl} from "@angular/forms";
+import {Component, OnInit} from '@angular/core';
+import {FormGroup} from '@angular/forms';
 import {Introduction} from '../../shared/models/introduction';
-import {MatDialog, MatDialogRef} from '@angular/material';
-import {SouscriptionInitFormService} from './introduction.init-form.service';
+import {MatDialogRef} from '@angular/material';
+import {SouscriptionInitFormService} from './souscription.init-form.service';
 
 @Component({
   selector: 'app-intro-form',
