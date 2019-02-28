@@ -47,7 +47,7 @@ export class HomeResolverService implements Resolve<any> {
     const id: number = activatedRoute.params['id'];
     const result = _.find(this.introductions, { 'id': +id});
     if(!result) this.router.navigate(["/404"]);
-    return _.find(this.introductions, { 'id': +id});
+    return result;
   }
 
 }
