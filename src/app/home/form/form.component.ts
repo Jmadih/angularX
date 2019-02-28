@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, EventEmitter, OnInit} from '@angular/core';
 import {FormGroup} from '@angular/forms';
 import {Introduction} from '../../shared/models/introduction';
 import {MatDialogRef} from '@angular/material';
