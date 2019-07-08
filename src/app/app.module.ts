@@ -1,5 +1,4 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+
 
 
 import { AppComponent } from './app.component';
@@ -9,21 +8,22 @@ import {NotFoundComponent} from './not-found/not-found.component';
 import {RouterModule} from '@angular/router';
 import {appRoutes} from './app.routes';
 import {SharedModule} from './shared/shared.module';
-import { SkillsComponent } from './skills/skills.component';
 import {SecurityModule} from './security/security.module';
+import {BrowserModule} from '@angular/platform-browser';
+import {NgModule} from '@angular/core';
+import {SkillsModule} from './skills/skills.module';
 
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    NotFoundComponent,
-    SkillsComponent
-  ],
+    NotFoundComponent],
   imports: [
     RouterModule.forRoot(appRoutes),
     BrowserModule,
     HomeModule,
+    SkillsModule,
     LayoutModule,
     SharedModule,
     SecurityModule

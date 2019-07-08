@@ -1,10 +1,8 @@
-import { Component, OnInit } from '@angular/core';
 import {Introduction, Status} from '../shared/models/introduction';
-import {ActivatedRoute} from '@angular/router';
-import {MatDialog, MatDialogRef} from '@angular/material';
-import {IntroFormComponent} from './form/form.component';
-import {filter, mergeMap} from 'rxjs/operators';
 import {HomeService} from './home.service';
+import {MatDialog} from '@angular/material';
+import {ActivatedRoute} from '@angular/router';
+import {Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-home',
@@ -13,7 +11,7 @@ import {HomeService} from './home.service';
 })
 export class HomeComponent implements OnInit {
 
-  introduction : Introduction;
+  introduction: Introduction;
 
   constructor(private route: ActivatedRoute,
               private dialog: MatDialog,
@@ -22,7 +20,8 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
     this.route.data.subscribe(data => {
-      this.introduction = data['intro'];
+      const key = 'intro';
+      this.introduction = data[key];
     });
   }
 
@@ -30,10 +29,10 @@ export class HomeComponent implements OnInit {
     return Status[status] === Status.AVAILABLE;
   }
 
-  edit(){
-   this.homeService.openEditPopUp(this.introduction)
+  edit() {
+    this.homeService.openEditPopUp(this.introduction)
       .subscribe(introduction => {
-        if(introduction) {
+        if (introduction) {
           this.introduction = introduction;
         }
       });

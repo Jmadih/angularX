@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+
 
 @Component({
   selector: 'app-skills',
@@ -12,4 +13,7 @@ export class SkillsComponent implements OnInit {
   ngOnInit() {
   }
 
+  add() {
+
+  }
 }

@@ -6,6 +6,7 @@ import {SkillsComponent} from './skills.component';
   imports: [
     SharedModule
   ],
-  declarations: [SkillsComponent]
+  declarations: [SkillsComponent],
+  exports: [SkillsComponent]
 })
 export class SkillsModule { }

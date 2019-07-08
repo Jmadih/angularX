@@ -1,7 +1,7 @@
 import {Component, OnInit, Output, Input, EventEmitter} from '@angular/core';
 import {FormGroup, FormControl} from "@angular/forms";
 import {Introduction} from '../../shared/models/introduction';
-import {MatDialog, MatDialogRef} from '@angular/material';
+import { MatDialog, MatDialogRef } from '@angular/material/dialog';
 import {SouscriptionInitFormService} from './introduction.init-form.service';
 
 @Component({
