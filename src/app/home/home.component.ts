@@ -10,14 +10,15 @@ import {ActivatedRoute} from '@angular/router';
 export class HomeComponent implements OnInit {
   private disable = false;
 
-  introduction : Introduction;
+  introduction: Introduction;
 
   constructor(private route: ActivatedRoute) {
   }
 
   ngOnInit() {
     this.route.data.subscribe(data => {
-      this.introduction = data['intro'];
+      const introKey = 'intro';
+      this.introduction = data[introKey];
     });
   }
 
@@ -25,16 +26,16 @@ export class HomeComponent implements OnInit {
     return status === Status.AVAILABLE;
   }
 
-  edit(){
+  edit() {
     this.disable = true;
     alert('edit');
   }
 
-  save(model){
+  save(model) {
     console.log(model);
   }
 
-  cancel(){
-    console.log("cancel");
+  cancel() {
+    console.log('cancel');
   }
 }
