@@ -17,14 +17,14 @@ export class HomeComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.introduction.firstname = 'Lucie';
-    this.introduction.lastname = 'Macdonie';
-    this.introduction.birthDate = '10/09/1985';
-    this.introduction.email = 'lucie.macdonie@gmail.com';
-    this.introduction.description = 'I am a professional tiger wrestler. I wrestled the biggest Siberian Tigers for the opening act at the Awesome and Dangerous Circus.';
-    this.introduction.imageUrl = 'assets/images/me.jpg';
-    this.introduction.status = Status.AVAILABLE;
-    this.introduction.links = [
+    this.introduction._firstname = 'Lucie';
+    this.introduction._lastname = 'Macdonie';
+    this.introduction._birthDate = '10/09/1985';
+    this.introduction._email = 'lucie.macdonie@gmail.com';
+    this.introduction._description = 'I am a professional tiger wrestler. I wrestled the biggest Siberian Tigers for the opening act at the Awesome and Dangerous Circus.';
+    this.introduction._imageUrl = 'assets/images/me.jpg';
+    this.introduction._status = Status.AVAILABLE;
+    this.introduction._links = [
       new Link('', './assets/images/linkedin.png'),
       new Link('', './assets/images/github.png'),
       new Link('', './assets/images/codepen.png')];
@@ -34,7 +34,7 @@ export class HomeComponent implements OnInit {
     return status === Status.AVAILABLE;
   }
 
-  edit(){
+  edit() {
     this.disable = true;
     alert('edit');
   }
