@@ -1,19 +1,15 @@
 import {NgModule} from '@angular/core';
 import {
-  MatAutocompleteModule,
   MatButtonModule,
   MatCardModule,
   MatCheckboxModule,
-  MatDatepickerModule,
   MatDialogModule,
   MatFormFieldModule,
   MatIconModule,
   MatInputModule,
   MatMenuModule,
-  MatNativeDateModule,
   MatOptionModule,
   MatProgressBarModule,
-  MatProgressSpinnerModule,
   MatRadioModule,
   MatSelectModule,
   MatSliderModule,
@@ -24,7 +20,7 @@ import {
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 
-export let Mat_MODULES: any = [
+export let MatMODULES: any = [
   BrowserAnimationsModule,
   MatButtonModule,
   MatCardModule,
@@ -45,7 +41,7 @@ export let Mat_MODULES: any = [
 ];
 
 @NgModule({
-  exports: [...Mat_MODULES],
+  exports: [...MatMODULES],
 })
 export class MatModule {
 }

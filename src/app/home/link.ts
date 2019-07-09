@@ -1,5 +1,5 @@
-export class Link{
+export class Link {
 
-  constructor(public url: string, public picture: string){}
+  constructor(public url: string, public picture: string) {}
 
 }

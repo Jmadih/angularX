@@ -15,11 +15,11 @@ export class HomeComponent implements OnInit {
 
   }
 
-  isAvailable(status: Status): boolean{
+  isAvailable(status: Status): boolean {
     return status === Status.AVAILABLE;
   }
 
-  edit(){
+  edit() {
     alert('edit');
   }
 }
