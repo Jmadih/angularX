@@ -20,7 +20,8 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
     this.route.data.subscribe(data => {
-      this.introduction = data['intro'];
+      const introKey = 'intro';
+      this.introduction = data[introKey];
     });
   }
 
