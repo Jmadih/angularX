@@ -50,7 +50,7 @@ export class Introduction {
     }
 
     set _imageUrl(value: string) {
-        this._imageUrl = value;
+        this.imageUrl = value;
     }
 
     get _birthDate(): string {
