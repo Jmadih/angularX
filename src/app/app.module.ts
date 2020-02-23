@@ -1,10 +1,12 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import {BrowserModule} from '@angular/platform-browser';
+import {NgModule} from '@angular/core';
 
 
-import { AppComponent } from './app.component';
+import {AppComponent} from './app.component';
+import {SharedModule} from './shared/shared.module';
 import {HomeModule} from './home/home.module';
 
+//import { HomeComponent } from './home/home.component';
 
 
 @NgModule({
@@ -13,6 +15,7 @@ import {HomeModule} from './home/home.module';
   ],
   imports: [
     BrowserModule,
+    SharedModule,
     HomeModule
   ],
   providers: [],
