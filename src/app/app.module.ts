@@ -7,7 +7,6 @@ import {LayoutModule} from './layout/layout.module';
 import {NotFoundComponent} from './not-found/not-found.component';
 import {RouterModule} from '@angular/router';
 import {appRoutes} from './app.routes';
-import {SharedModule} from './shared/shared.module';
 import { SkillsComponent } from './skills/skills.component';
 import {ConnectedGuard} from './security/connected.guard';
 import {SecurityModule} from './security/security.module';
