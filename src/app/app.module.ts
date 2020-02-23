@@ -1,11 +1,9 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-
-
-import { AppComponent } from './app.component';
+import {BrowserModule} from '@angular/platform-browser';
+import {NgModule} from '@angular/core';
+import {AppComponent} from './app.component';
+import {SharedModule} from './shared/shared.module';
 import {HomeModule} from './home/home.module';
 import {LayoutModule} from './layout/layout.module';
-
 
 
 @NgModule({
@@ -15,7 +13,8 @@ import {LayoutModule} from './layout/layout.module';
   imports: [
     BrowserModule,
     HomeModule,
-    LayoutModule
+    LayoutModule,
+    SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent]
