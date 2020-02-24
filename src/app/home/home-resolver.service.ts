@@ -8,10 +8,10 @@ export class HomeResolverService implements Resolve<any> {
 
   constructor(private router: Router, private homeService: HomeService) { }
 
-  resolve(activatedRoute: ActivatedRouteSnapshot){
-    const id: number = activatedRoute.params['id'];
+  resolve(activatedRoute: ActivatedRouteSnapshot) {
+    const id: number = activatedRoute.params.id;
     const result = this.homeService.getIntroduction(id);
-    if(!result) this.router.navigate(["/404"]);
+    if (!result) { this.router.navigate(['/404']).then(); }
     return result;
   }
 

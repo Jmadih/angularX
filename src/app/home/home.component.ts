@@ -10,14 +10,14 @@ import {ActivatedRoute} from '@angular/router';
 export class HomeComponent implements OnInit {
   private disable = false;
 
-  private introduction : Introduction;
+  private introduction: Introduction;
 
   constructor(private route: ActivatedRoute) {
   }
 
   ngOnInit() {
     this.route.data.subscribe(data => {
-      this.introduction = data['intro'];
+      this.introduction = data.intro;
     });
   }
 
