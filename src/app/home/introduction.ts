@@ -1,102 +1,103 @@
-import {Link} from "./link";
+import {Link} from './link';
+
 export enum Status {
   AVAILABLE, UNAVAILABLE
 }
 
-export class Introduction{
+export class Introduction {
 
-    private _id : number;
-    private _firstname : string;
-    private _lastname : string;
-    private _imageUrl : string;
-    private _birthDate : string;
-    private _gender: string;
-    private _email: string;
-    private _status: Status;
-    private _description: string;
-    private _links : Link[];
+    private id: number;
+    private firstname: string;
+    private lastname: string;
+    private imageUrl: string;
+    private birthDate: string;
+    private gender: string;
+    private email: string;
+    private status: Status;
+    private description: string;
+    private links: Link[];
 
-    constructor(){
-        this._links = new Array<Link>();
+    constructor() {
+        this.links = new Array<Link>();
     }
 
-    get id(): number {
-        return this._id;
+    get _id(): number {
+        return this.id;
     }
 
-    set id(value: number) {
-        this._id = value;
+    set _id(value: number) {
+        this.id = value;
     }
 
-    get firstname(): string {
-        return this._firstname;
+    get _firstname(): string {
+        return this.firstname;
     }
 
-    set firstname(value: string) {
-        this._firstname = value;
+    set _firstname(value: string) {
+        this.firstname = value;
     }
 
-    get lastname(): string {
-        return this._lastname;
+    get _lastname(): string {
+        return this.lastname;
     }
 
-    set lastname(value: string) {
-        this._lastname = value;
+    set _lastname(value: string) {
+        this.lastname = value;
     }
 
-    get imageUrl(): string {
-        return this._imageUrl;
+    get _imageUrl(): string {
+        return this.imageUrl;
     }
 
-    set imageUrl(value: string) {
-        this._imageUrl = value;
+    set _imageUrl(value: string) {
+        this.imageUrl = value;
     }
 
-    get birthDate(): string {
-        return this._birthDate;
+    get _birthDate(): string {
+        return this.birthDate;
     }
 
-    set birthDate(value: string) {
-        this._birthDate = value;
+    set _birthDate(value: string) {
+        this.birthDate = value;
     }
 
-    get gender(): string {
-        return this._gender;
+    get _gender(): string {
+        return this.gender;
     }
 
-    set gender(value: string) {
-        this._gender = value;
+    set _gender(value: string) {
+        this.gender = value;
     }
 
-    get email(): string {
-        return this._email;
+    get _email(): string {
+        return this.email;
     }
 
-    set email(value: string) {
-        this._email = value;
+    set _email(value: string) {
+        this.email = value;
     }
 
-    get status(): Status {
-        return this._status;
+    get _status(): Status {
+        return this.status;
     }
 
-    set status(value: Status) {
-        this._status = value;
+    set _status(value: Status) {
+        this.status = value;
     }
 
-    get description(): string {
-        return this._description;
+    get _description(): string {
+        return this.description;
     }
 
-    set description(value: string) {
-        this._description = value;
+    set _description(value: string) {
+        this.description = value;
     }
 
-    get links(): Link[] {
-        return this._links;
+    get _links(): Link[] {
+        return this.links;
     }
 
-    set links(value: Link[]) {
-        this._links = value;
+    set _links(value: Link[]) {
+        this.links = value;
     }
 }
