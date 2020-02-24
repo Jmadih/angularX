@@ -6,9 +6,9 @@ import {FormGroup, FormControl} from "@angular/forms";
   templateUrl: 'form.component.html',
   styleUrls: ['form.component.scss']
 })
-export class IntroFormComponent implements OnInit {
+export class FormComponent implements OnInit {
 
-  @Input() model:any = {};
+  @Input() model: any = {};
 
   @Output() cancel$;
 
@@ -26,7 +26,7 @@ export class IntroFormComponent implements OnInit {
     this.cancel$.emit();
   }
 
-  submit(model){
+  submit(model) {
     this.submit$.emit(model);
   }
 }
