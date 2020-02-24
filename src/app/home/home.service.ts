@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import {Injectable} from '@angular/core';
 import {Link} from '../shared/models/link';
 import {Introduction, Status} from '../shared/models/introduction';
 import * as _ from 'lodash';
@@ -6,7 +6,7 @@ import * as _ from 'lodash';
 @Injectable()
 export class HomeService {
 
-  introductions : Introduction[] = [{
+  introductions: Introduction[] = [{
     id : 1,
     firstname :  'Lucie',
     lastname :  'Macdonie',
@@ -15,11 +15,12 @@ export class HomeService {
     gender:  'W',
     email:  'lucie.macdonie@gmail.com',
     status: Status.AVAILABLE,
-    description:  'I am a professional tiger wrestler. I wrestled the biggest Siberian Tigers for the opening act at the Awesome and Dangerous Circus.',
+    description:  'I am a professional tiger wrestler. I wrestled the biggest Siberian Tigers for the ' +
+      'opening act at the Awesome and Dangerous Circus.',
     links : [
-      new Link("", "./assets/images/linkedin.png"),
-      new Link("", "./assets/images/github.png"),
-      new Link("", "./assets/images/codepen.png")],
+      new Link('', './assets/images/linkedin.png'),
+      new Link('', './assets/images/github.png'),
+      new Link('', './assets/images/codepen.png')],
     experience: 11
   },
     {
@@ -33,9 +34,9 @@ export class HomeService {
       status: Status.UNAVAILABLE,
       description:  'I am a mechanical engineer. I\'ve worked at the biggest aerospace company',
       links : [
-        new Link("", "./assets/images/linkedin.png"),
-        new Link("", "./assets/images/github.png"),
-        new Link("", "./assets/images/codepen.png")],
+        new Link('', './assets/images/linkedin.png'),
+        new Link('', './assets/images/github.png'),
+        new Link('', './assets/images/codepen.png')],
       experience: 5
     }];
 
