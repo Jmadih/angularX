@@ -1,16 +1,16 @@
 <div class="parentCardsI">
   <mat-card>
-    <img class="introImg" mat-card-image [src]="introduction?.imageUrl">
+    <img class="introImg" mat-card-image [src]="introduction?._imageUrl">
     <div class="divIntro">
       <mat-card-content>
-        <p>{{introduction?.firstname}} {{introduction?.lastname}}</p>
-        <p>{{introduction?.email}}</p>
-        <p>{{introduction?.birthDate}}</p>
-        <p>{{isAvailable(introduction?.status) ? 'Available' : 'Unvailable'}}</p>
+        <p>{{introduction?._firstname}} {{introduction?._lastname}}</p>
+        <p>{{introduction?._email}}</p>
+        <p>{{introduction?._birthDate}}</p>
+        <p>{{isAvailable(introduction?._status) ? 'Available' : 'Unvailable'}}</p>
       </mat-card-content>
     </div>
     <p class="description">
-      {{introduction?.description}}
+      {{introduction?._description}}
     </p>
     <button mat-button mat-raised-button  color="accent" [disabled]="disable" (click)="edit()">Edit</button>
   </mat-card>
