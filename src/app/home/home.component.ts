@@ -24,8 +24,8 @@ export class HomeComponent implements OnInit {
     });
   }
 
-  isAvailable(status: string): boolean {
-    return Status[status] === Status.AVAILABLE;
+  isAvailable(status: Status): boolean {
+    return status === Status.AVAILABLE;
   }
 
   edit() {
@@ -34,3 +34,4 @@ export class HomeComponent implements OnInit {
       });
   }
 }
+
