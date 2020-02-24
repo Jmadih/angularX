@@ -7,15 +7,14 @@ import {LayoutModule} from './layout/layout.module';
 import {NotFoundComponent} from './not-found/not-found.component';
 import {RouterModule} from '@angular/router';
 import {appRoutes} from './app.routes';
-import { SkillsComponent } from './skills/skills.component';
 import {SecurityModule} from './security/security.module';
+import {SkillsModule} from './skills/skills.module';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    NotFoundComponent,
-    SkillsComponent
+    NotFoundComponent
   ],
   imports: [
     RouterModule.forRoot(appRoutes),
@@ -23,7 +22,8 @@ import {SecurityModule} from './security/security.module';
     HomeModule,
     LayoutModule,
     SharedModule,
-    SecurityModule
+    SecurityModule,
+    SkillsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
