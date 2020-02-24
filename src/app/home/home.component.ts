@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {Introduction, Status} from '../shared/models/introduction';
 import {ActivatedRoute} from '@angular/router';
 
@@ -10,15 +10,14 @@ import {ActivatedRoute} from '@angular/router';
 export class HomeComponent implements OnInit {
   private disable = false;
 
-  introduction: Introduction;
+  private introduction: Introduction;
 
   constructor(private route: ActivatedRoute) {
   }
 
   ngOnInit() {
     this.route.data.subscribe(data => {
-      const introKey = 'intro';
-      this.introduction = data[introKey];
+      this.introduction = data.intro;
     });
   }
 
