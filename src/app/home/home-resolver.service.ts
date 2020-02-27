@@ -13,11 +13,11 @@ export class HomeResolverService implements Resolve<any> {
   }
 
   resolve(activatedRoute: ActivatedRouteSnapshot) {
-    const id: number = activatedRoute.params['id'];
+    const id: number = activatedRoute.params.id;
     return this.homeService.getIntroduction(id).pipe(
       catchError((err) => {
         if (err.status === 404) {
-          this.router.navigate(["/404"]);
+          this.router.navigate(['/404']);
           return of(null);
         }
       })

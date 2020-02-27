@@ -11,7 +11,7 @@ export class HomeService {
   constructor(private http: HttpClient) { }
 
   getIntroduction(id: number): Observable<Introduction> {
-    return this.http.get<Introduction>(`${BASE_URL + "/" + appConst.urls.intros}/${id}`);
+    return this.http.get<Introduction>(`${BASE_URL + '/' + appConst.urls.intros}/${id}`);
   }
 
 }
