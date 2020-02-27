@@ -1,11 +1,13 @@
-import { TestBed, inject } from '@angular/core/testing';
+import {inject, TestBed} from '@angular/core/testing';
 
-import { HomeResolverService } from './home-resolver.service';
+import {HomeResolverService} from './home-resolver.service';
+import {RouterTestingModule} from '@angular/router/testing';
 
 describe('HomeResolverService', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
-      providers: [HomeResolverService]
+      providers: [HomeResolverService],
+      imports: [RouterTestingModule]
     });
   });
 
