@@ -43,8 +43,8 @@ export class HomeService {
 
   constructor() { }
 
-  getIntroduction(id: number){
-    return _.find(this.introductions, { 'id': +id});
+  getIntroduction(id: number) {
+    return _.find(this.introductions, { id: +id});
   }
 
 }
