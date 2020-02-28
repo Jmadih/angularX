@@ -1,7 +1,7 @@
-import {Component, OnInit, Output, Input, EventEmitter} from '@angular/core';
-import {FormGroup, FormControl} from "@angular/forms";
+import {Component, EventEmitter, OnInit} from '@angular/core';
+import {FormGroup} from '@angular/forms';
+import {MatDialogRef} from '@angular/material/dialog';
 import {Introduction} from '../../shared/models/introduction';
-import { MatDialog, MatDialogRef } from '@angular/material/dialog';
 import {SouscriptionInitFormService} from './introduction.init-form.service';
 
 @Component({
@@ -9,7 +9,7 @@ import {SouscriptionInitFormService} from './introduction.init-form.service';
   templateUrl: 'form.component.html',
   styleUrls: ['form.component.scss']
 })
-export class IntroFormComponent implements OnInit {
+export class FormComponent implements OnInit {
 
   model: Introduction;
 
@@ -19,7 +19,7 @@ export class IntroFormComponent implements OnInit {
 
   form: FormGroup;
 
-  constructor(private dialogRef: MatDialogRef<IntroFormComponent>,
+  constructor(private dialogRef: MatDialogRef<FormComponent>,
               private souscriptionInitFormService: SouscriptionInitFormService) {
     this.submit$ = new EventEmitter();
     this.cancel$ = new EventEmitter();
