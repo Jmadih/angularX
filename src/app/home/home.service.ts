@@ -44,7 +44,7 @@ export class HomeService {
 
   // Endpoint Introductions: `${BASE_URL + "/" + appConst.urls.intros}/${id}`
   getIntroduction(id: number){
-    return _.find(this.introductions, { 'id': +id});
+    return _.find(this.introductions, { id: +id});
   }
 
 }
