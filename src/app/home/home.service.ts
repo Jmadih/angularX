@@ -4,9 +4,9 @@ import {appConst} from '../shared/constants';
 import {BASE_URL} from '../../app.config';
 import {Introduction} from '../shared/models/introduction';
 import {Observable} from 'rxjs/Observable';
-import {MatDialog, MatDialogRef} from '@angular/material';
 import {filter, mergeMap} from 'rxjs/operators';
 import {FormComponent} from './form/form.component';
+import {MatDialog, MatDialogRef} from '@angular/material/dialog';
 
 @Injectable()
 export class HomeService {
@@ -17,7 +17,7 @@ export class HomeService {
               private dialog: MatDialog) { }
 
   getIntroduction(id: number): Observable<Introduction> {
-    return this.http.get<Introduction>(`${BASE_URL + "/" + appConst.urls.intros}/${id}`);
+    return this.http.get<Introduction>(`${BASE_URL + '/' + appConst.urls.intros}/${id}`);
   }
 
   openEditPopUp(model: Introduction): Observable<Introduction> {
@@ -31,6 +31,6 @@ export class HomeService {
   }
 
   private editIntroduction(introduction: Introduction): Observable<Introduction> {
-    return this.http.put<Introduction>(`${BASE_URL + "/" + appConst.urls.intros}/${introduction.id}`, introduction);
+    return this.http.put<Introduction>(`${BASE_URL + '/' + appConst.urls.intros}/${introduction.id}`, introduction);
   }
 }
