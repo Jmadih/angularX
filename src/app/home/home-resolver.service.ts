@@ -1,15 +1,15 @@
-import { Injectable } from '@angular/core';
+import {Injectable} from '@angular/core';
 import {ActivatedRouteSnapshot, Resolve, Router} from '@angular/router';
 import {Introduction, Status} from '../shared/models/introduction';
 import {Link} from '../shared/models/link';
 
 import * as _ from 'lodash';
-import {Observable} from 'rxjs/Observable';
+import {Observable} from 'rxjs';
 
 @Injectable()
 export class HomeResolverService implements Resolve<any> {
 
-  introductions : Introduction[] = [{
+  introductions: Introduction[] = [{
     id : 1,
     firstname :  'Lucie',
     lastname :  'Macdonie',
@@ -45,9 +45,9 @@ export class HomeResolverService implements Resolve<any> {
   constructor(private router: Router) { }
 
   resolve(activatedRoute: ActivatedRouteSnapshot): Observable<Introduction> {
-    const id: number = activatedRoute.params['id'];
-    const result = _.find(this.introductions, { 'id': +id});
-    if(!result) this.router.navigate(['/404']);
+    const id: number = activatedRoute.params.id;
+    const result = _.find(this.introductions, { id : +id});
+    if (!result) { this.router.navigate(['/404']); }
     return result;
   }
 
