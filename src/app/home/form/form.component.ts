@@ -1,5 +1,4 @@
-import {Component, OnInit, Output, Input, EventEmitter} from '@angular/core';
-import {FormGroup, FormControl} from "@angular/forms";
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 
 @Component({
   selector: 'app-intro-form',
