@@ -20,6 +20,5 @@ export class HomeComponent implements OnInit {
   }
 
   edit() {
-    alert('edit');
   }
 }
