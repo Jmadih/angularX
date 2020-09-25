@@ -1,8 +1,8 @@
 import {Component, OnInit} from '@angular/core';
 import {Introduction, Status} from '../shared/models/introduction';
 import {ActivatedRoute} from '@angular/router';
-import {MatDialog} from '@angular/material';
 import {HomeService} from './home.service';
+import {MatDialog} from '@angular/material/dialog';
 
 @Component({
   selector: 'app-home',
