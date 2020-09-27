@@ -4,9 +4,9 @@ import {appConst} from '../shared/constants';
 import {BASE_URL} from '../../app.config';
 import {Introduction} from '../shared/models/introduction';
 import {Observable} from 'rxjs/Observable';
-import {MatDialog, MatDialogRef} from '@angular/material';
+import {filter, mergeMap} from 'rxjs/operators';
 import {FormComponent} from './form/form.component';
-import {mergeMap, filter} from 'rxjs/operators';
+import {MatDialog, MatDialogRef} from '@angular/material/dialog';
 
 @Injectable()
 export class HomeService {
