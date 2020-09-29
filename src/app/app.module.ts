@@ -13,8 +13,7 @@ import { SkillsComponent } from './skills/skills.component';
 @NgModule({
   declarations: [
     AppComponent,
-    NotFoundComponent,
-    SkillsComponent
+    NotFoundComponent
   ],
   imports: [
     RouterModule.forRoot(appRoutes),
