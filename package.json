@@ -29,7 +29,7 @@
     "cors": "^2.7.1",
     "express": "^4.16.2",
     "lodash": "^4.17.20",
-    "rxjs": "^6.5.4",
+    "rxjs": "^6.6.7",
     "rxjs-compat": "^6.0.0-rc.0",
     "tslib": "^2.0.0",
     "underscore": "^1.8.3",
