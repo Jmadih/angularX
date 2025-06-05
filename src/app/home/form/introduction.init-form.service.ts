@@ -1,15 +1,15 @@
-import {FormBuilder, FormControl, FormGroup, Validators} from '@angular/forms';
+import {UntypedFormBuilder, FormControl, UntypedFormGroup, Validators} from '@angular/forms';
 import {Injectable} from '@angular/core';
 import {Introduction} from '../../shared/models/introduction';
 
 @Injectable()
 export class SouscriptionInitFormService {
 
-  constructor(private formBuilder: FormBuilder) {
+  constructor(private formBuilder: UntypedFormBuilder) {
 
   }
 
-  initForm(introduction: Introduction): FormGroup {
+  initForm(introduction: Introduction): UntypedFormGroup {
     const id = this.formBuilder.control(introduction ? introduction.id : '', [Validators.required]);
     const imageUrl = this.formBuilder.control(introduction ? introduction.imageUrl : '', [Validators.required]);
     const firstname = this.formBuilder.control(introduction ? introduction.firstname : '', [Validators.required]);

@@ -3,10 +3,10 @@ import {HttpClient} from '@angular/common/http';
 import {appConst} from '../shared/constants';
 import {BASE_URL} from '../../app.config';
 import {Introduction} from '../shared/models/introduction';
-import {Observable} from 'rxjs/Observable';
+import { Observable } from 'rxjs';
 import {filter, mergeMap} from 'rxjs/operators';
 import {FormComponent} from './form/form.component';
-import {MatDialog, MatDialogRef} from '@angular/material/dialog';
+import {MatLegacyDialog as MatDialog, MatLegacyDialogRef as MatDialogRef} from '@angular/material/legacy-dialog';
 
 @Injectable()
 export class HomeService {

@@ -1,13 +1,13 @@
 import {Injectable} from '@angular/core';
-import {ActivatedRouteSnapshot, Resolve, Router} from '@angular/router';
+import { ActivatedRouteSnapshot, Router } from '@angular/router';
 
 import {HomeService} from './home.service';
 import {catchError} from 'rxjs/operators';
-import {of} from 'rxjs/observable/of';
+import { of } from 'rxjs';
 
 
 @Injectable()
-export class HomeResolverService implements Resolve<any> {
+export class HomeResolverService  {
 
   constructor(private router: Router, private homeService: HomeService) {
   }

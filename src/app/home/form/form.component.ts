@@ -1,6 +1,6 @@
 import {Component, EventEmitter, OnInit} from '@angular/core';
-import {FormGroup} from '@angular/forms';
-import {MatDialogRef} from '@angular/material/dialog';
+import {UntypedFormGroup} from '@angular/forms';
+import {MatLegacyDialogRef as MatDialogRef} from '@angular/material/legacy-dialog';
 import {Introduction} from '../../shared/models/introduction';
 import {SouscriptionInitFormService} from './introduction.init-form.service';
 
@@ -17,7 +17,7 @@ export class FormComponent implements OnInit {
 
   submit$;
 
-  form: FormGroup;
+  form: UntypedFormGroup;
 
   constructor(private dialogRef: MatDialogRef<FormComponent>,
               private souscriptionInitFormService: SouscriptionInitFormService) {

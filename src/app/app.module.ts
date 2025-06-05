@@ -17,7 +17,7 @@ import {SkillsModule} from './skills/skills.module';
     NotFoundComponent
   ],
   imports: [
-    RouterModule.forRoot(appRoutes),
+    RouterModule.forRoot(appRoutes, {}),
     BrowserModule,
     HomeModule,
     LayoutModule,
